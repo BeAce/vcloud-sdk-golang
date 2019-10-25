@@ -1,7 +1,7 @@
 package vod
 
 import (
-	"github.com/TTvcloud/vcloud-sdk-golang/base"
+	"github.com/BeAce/vcloud-sdk-golang/base"
 )
 
 // GetPlayInfo
