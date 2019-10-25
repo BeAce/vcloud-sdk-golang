@@ -38,10 +38,7 @@ func CreateTempAKSK() (accessKeyId string, plainSk string, err error) {
 
 func GenerateAccessKeyId(prefix string) (string, error) {
 	// 生成uuid，如：a1fe1d4f-eb56-4a06-86e8-3e5068a1a838
-	uid, err := uuid.NewV4()
-	if err != nil {
-		return "", err
-	}
+	uid := uuid.NewV4()
 
 	// 滤掉'-'后，做base64，输出：YTFmZTFkNGZlYjU2NGEwNjg2ZTgzZTUwNjhhMWE4Mzg=
 	uidBase64 := base64.StdEncoding.EncodeToString([]byte(strings.Replace(uid.String(), "-", "", -1)))
